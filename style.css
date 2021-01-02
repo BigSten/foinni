@@ -425,7 +425,7 @@ hr {
 
 .works__item img {
   filter: grayscale(1);
-  filter: brightness(20%);
+  filter: brightness(40%);
 
   transition: filter .3s linear;
 }
@@ -443,10 +443,104 @@ hr {
   padding: 17px 60px 14px;
   transform: scale(1, 1);
 
-  transition: transform .2s ease;
+  transition: transform .3s ease;
 }
 
 .works__btn:hover {
   transform: scale(1.1, 1.1);
 }
 
+/*PRICE*/
+.price {
+  text-align: center;
+  padding: 105px 0 127px 0;
+  color: #454546;
+}
+
+.price__inner {}
+
+.price__title {
+  margin-bottom: 50px;
+}
+
+.price__content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.price__item {
+  cursor: pointer;
+  width: 25%;
+  max-width: 268px;
+
+
+}
+
+.price__block {
+  padding-bottom: 22px;
+  border: 1px solid #fff;
+}
+
+.price__subtitle {
+  margin-bottom: 27px;
+  transition: all .2s linear;
+}
+
+.price__price {
+  font-family: 'Roboto Slab', serif;
+  font-size: 36px;
+  font-weight: 400;
+  border: 1px solid #454546;
+  padding: 12px 0 20px;
+
+  transition: all .2s linear;
+}
+
+.price__price sup {
+  font-size: 30px;
+}
+
+.price__price span {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.price__text {
+  padding: 30px 0 45px;
+}
+
+.price__text p {
+  padding-bottom: 17px;
+}
+
+.price__text p:last-child {
+  margin-bottom: 0;
+}
+
+.price__btn {
+  border: 1px solid #454546;
+  padding: 10px 15px;
+
+  transition: all .2s linear;
+}
+
+.price__item:hover .price__price {
+  background-color: #1dde85;
+  border-color: #1dde85;
+  color: #fff;
+}
+
+.price__item:hover .price__block {
+  border: 1px solid #1dde85;
+}
+
+.price__item:hover .price__btn {
+  background-color: #1dde85;
+  border-color: #1dde85;
+  color: #fff;
+}
+
+.price__item:hover .price__subtitle {
+  color: #1dde85;
+}
