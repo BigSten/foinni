@@ -673,3 +673,113 @@ button[type = "submit"] {
   font-weight: 100;
 }
 
+
+/*FOOTER*/
+.footer {
+  background-color: #0b0a0a;
+  color: #868588;
+  padding: 35px 0 70px;
+}
+
+.footer__item {
+  width: 33.333%;
+}
+
+.footer h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__about {
+  flex: 0 1 385px;
+  padding: 0 40px;
+}
+
+.footer__about p {
+  line-height: 25px;
+
+}
+
+.footer__links {
+  flex: 1 0 255px;
+  padding: 0 40px;
+}
+
+.footer__links-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 150px;
+
+  max-width: 190px;
+
+}
+
+.footer__link {
+  margin-bottom: 10px;
+}
+
+.footer__link:last-child {
+  margin-bottom: 0;
+}
+
+.footer__contacts {
+
+}
+
+.footer__icons {
+  display: flex;
+}
+
+.footer__icons-item {
+  border: 2px solid #8f8e91;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.footer__icons-item i {
+
+}
+
+.footer__form .footer__btn {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin-top: 17px;
+}
+
+
+.footer__form .footer__inp {
+  background: none;
+  border: 1px solid #838484;
+  padding: 10px 0 10px 8px;
+  width: 100%;
+  max-width: 250px;
+  color: #fff;
+  outline: none;
+}
+
+.footer__sub {
+  margin-top: 12px;
+}
+
+.design-by {
+  text-align: center;
+  background-color: #000;
+  color: #8f8e91;
+  padding: 27px 0;
+}
