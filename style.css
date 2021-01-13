@@ -5,12 +5,6 @@ font-family: 'Roboto Slab', serif;
 font-family: 'Pacifico', cursive;
 */
 
-/*BODY
-font-family: 'Roboto', sans-serif;
-font-weight: 100;
-font-size: 14px;
-*/
-
 html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
@@ -31,6 +25,7 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -67,6 +62,8 @@ hr {
 }
 
 .header__inner {
+  position: relative;
+  width: 100%;
   padding: 25px 0 15px 0;
   display: flex;
   align-items: center;
@@ -77,6 +74,7 @@ hr {
   padding-left: 30px;
   font-weight: 400;
   font-size: 40px;
+  margin-right: 60px;
 }
 
 .header__logo span {
@@ -85,9 +83,50 @@ hr {
   color: #1dde85;
 }
 
-.header__nav {
+
+/*menu*/
+.header__menu {
   display: flex;
+  align-items: center;
+
+}
+
+.header__burger {
+  cursor: pointer;
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 20px;
+}
+
+.header__burger span {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__burger:before,
+.header__burger:after {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+
+.header__burger:after {
+  bottom: 0;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
   padding-right: 95px;
+
 }
 
 .nav__link {
@@ -129,6 +168,9 @@ hr {
 .nav__link:hover {
   color: #1dde85;
 }
+/*/.menu*/
+
+
 
 .header__intro {
   position: absolute;
@@ -193,15 +235,17 @@ hr {
 
 .services__content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+
+  margin: 0 -25px;
 }
 
 .services__item {
   cursor: pointer;
-  width: 31%;
+  flex: 0 0 355px;
   border: 1px solid #c3c1bf;
-  margin-bottom: 48px;
+  margin: 0 25px 48px 25px;
   padding: 33px 15px 28px;
   transform: scale(1, 1);
 
@@ -269,15 +313,17 @@ hr {
 .teams__content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -10px -15px;
 }
 
 .teams__item {
   cursor: pointer;
   position: relative;
-  width: 25%;
-  max-width: 269px;
+  flex: 0 0 269px;
   height: 355px;
   overflow: hidden;
+  margin: 10px 15px;
 
   transition: all .8s ease;
 }
@@ -367,12 +413,15 @@ hr {
 }
 
 .works__active {
-  margin: 48px 0;
+  margin: 43px 0 48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .works__active label {
   cursor: pointer;
-  margin: 0 17px;
+  margin: 5px 17px;
   font-weight: 300;
   font-size: 18px;
   color: #434243;
@@ -385,6 +434,10 @@ hr {
 .works__active label:hover {
   border-bottom: 1px solid #1dde85;
   color: #1dde85;
+}
+
+.works__active-item {
+  margin: 100px;
 }
 
 #fil_1:checked ~ .works__active label:nth-child(1) {
@@ -414,12 +467,14 @@ hr {
 
 .works__content {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .works__item {
   cursor: pointer;
   width: 33.333%;
+  flex: 0 0 390px;
   margin-bottom: 46px;
 }
 
@@ -522,14 +577,14 @@ hr {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: -20px -8px;
 }
 
 .price__item {
   cursor: pointer;
   width: 25%;
-  max-width: 268px;
-
-
+  flex: 0 0 268px;
+  margin: 20px 8px;
 }
 
 .price__block {
@@ -609,8 +664,6 @@ hr {
   background: url("img/contacts/bg.jpg") center / cover no-repeat fixed;
 }
 
-.contact__inner {}
-
 .contact__title {
   color: #fff;
   font-weight: 400;
@@ -683,6 +736,7 @@ button[type = "submit"] {
 
 .footer__item {
   width: 33.333%;
+  margin: 20px 0;
 }
 
 .footer h3 {
@@ -696,6 +750,9 @@ button[type = "submit"] {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  margin: -20px 0;
+  justify-content: center;
 }
 
 .footer__about {
@@ -736,7 +793,7 @@ button[type = "submit"] {
 }
 
 .footer__icons {
-  display: flex;
+  display: inline-flex;
 }
 
 .footer__icons-item {
@@ -750,10 +807,6 @@ button[type = "submit"] {
   margin-right: 8px;
 }
 
-.footer__icons-item i {
-
-}
-
 .footer__form .footer__btn {
   padding: 12px 16px;
   font-size: 16px;
@@ -761,7 +814,6 @@ button[type = "submit"] {
   font-weight: 100;
   margin-top: 17px;
 }
-
 
 .footer__form .footer__inp {
   background: none;
@@ -782,4 +834,148 @@ button[type = "submit"] {
   background-color: #000;
   color: #8f8e91;
   padding: 27px 0;
+}
+
+
+
+
+
+
+/*MEDIA*/
+@media (max-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+
+  .teams__content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    width: 720px;
+  }
+
+  .header__inner {
+    position: relative;
+    width: 100%;
+    z-index: 2000;
+  }
+
+  .header__menu {
+    flex-direction: row-reverse;
+    background-color: rgb(3, 3, 3);
+    position: relative;
+
+    width: 100%;
+    z-index: 2000;
+  }
+
+  .topnav {
+    display: none;
+  }
+  ul.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    padding-right: 125px;
+  }
+  .nav__link {
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 20px;
+    width: max-content;
+  }
+  .header__burger {
+    display: block;
+    position: absolute;
+    padding-right: 30px;
+  }
+
+  .footer__contacts {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 540px;
+  }
+
+  .works__active-item {
+    margin-bottom: 30px;
+  }
+
+  .footer__item {
+    width: 100%;
+  }
+  .footer__about {
+    text-align: center;
+  }
+  .footer__links {
+    text-align: center;
+  }
+  .footer__links-content {
+    max-width: none;
+    flex: 1 1 auto;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .contact__form input {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .header__logo {
+    font-size: 24px;
+  }
+  .intro__title {
+    font-size: 32px;
+  }
+  .intro__subtitle {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 436px) {
+  .services__item {
+    flex: 0 1 355px;
+  }
+  .services__item:hover {
+    transform: none;
+  }
+
+  .header__intro {
+    top: 45%;
+  }
+  .header__logo {
+    font-size: 24px;
+  }
+  .intro__title {
+    font-size: 28px;
+  }
+  .intro__subtitle {
+    margin-top: 11px;
+    line-height: 30px;
+  }
 }

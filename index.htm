@@ -18,15 +18,27 @@
     <!--HEADER-->
     <header class="header">
       <div class="container">
-        <div class="header__inner">
+        <div class="header__inner" id="inner">
           <a href="#" class="header__logo">foi<span>nni</span></a>
-          <div class="header__nav">
-            <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link">Service</a>
-            <a href="#" class="nav__link">Pricing</a>
-            <a href="#" class="nav__link">Portfolio</a>
-            <a href="#" class="nav__link">Contact us</a>
+
+
+
+          
+          <div class="header__menu">
+            <ul class="topnav" id="myTopnav">
+              <a href="#" class="nav__link">Home</a>
+              <a href="#" class="nav__link">Service</a>
+              <a href="#" class="nav__link">Pricing</a>
+              <a href="#" class="nav__link">Portfolio</a>
+              <a href="#" class="nav__link">Contact us</a>
+            </ul>
+  
+            <div class="header__burger" id="menu">
+              <span></span>
+            </div>
           </div>
+
+
         </div><!--/.header__inner-->
       </div><!--/.container-->
       <hr>
@@ -221,11 +233,11 @@
               <input type="radio" name="filter" id="fil_4">
               <input type="radio" name="filter" id="fil_5">
               <div class="works__active">
-                <label for="fil_1">All</label>
-                <label for="fil_2">Design</label>
-                <label for="fil_3">Manipulation</label>
-                <label for="fil_4">Photography</label>
-                <label for="fil_5">Development</label>
+                <label for="fil_1" class="works__active-item">All</label>
+                <label for="fil_2" class="works__active-item">Design</label>
+                <label for="fil_3" class="works__active-item">Manipulation</label>
+                <label for="fil_4" class="works__active-item">Photography</label>
+                <label for="fil_5" class="works__active-item">Development</label>
               </div><!--/.works__active-->
               <div class="works__content">
 
@@ -430,6 +442,7 @@
 
 
 
+  <script src="script.js"></script>
   <script src="https://use.fontawesome.com/3ec20f0b52.js"></script>
 </body>
 </html>
