@@ -62,12 +62,17 @@ hr {
 }
 
 .header__inner {
+
+}
+
+.inner__content {
   position: relative;
   width: 100%;
   padding: 25px 0 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -863,15 +868,22 @@ button[type = "submit"] {
     width: 720px;
   }
 
+
+  .inner__content {
+    width: 720px;
+  }
+
+
   .header__inner {
     position: relative;
     width: 100%;
     z-index: 2000;
+    
   }
 
   .header__menu {
     flex-direction: row-reverse;
-    background-color: rgb(3, 3, 3);
+    background-color: #000;
     position: relative;
 
     width: 100%;
@@ -914,6 +926,12 @@ button[type = "submit"] {
     width: 540px;
   }
 
+
+  .inner__content {
+    width: 540px;
+  }
+
+
   .works__active-item {
     margin-bottom: 30px;
   }
@@ -939,6 +957,14 @@ button[type = "submit"] {
     width: 100%;
     padding: 0 15px;
   }
+
+
+  .inner__content {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
 
   .contact__form input {
     width: 100%;
